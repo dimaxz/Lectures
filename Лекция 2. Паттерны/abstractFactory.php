@@ -55,4 +55,4 @@ else{
 
 $text = $factory->createText("test");
 
-var_dump($text);
+

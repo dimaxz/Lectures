@@ -134,6 +134,4 @@ else{
 	$type = ItalianFactory::FAST;
 }
 
-
-
-$vehicle = $factory->createVehicle($type);
+$vehicle = $factory->create($type);
