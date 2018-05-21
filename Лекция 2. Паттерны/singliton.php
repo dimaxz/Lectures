@@ -57,3 +57,4 @@ $my2 = Singleton::getInstance();
 $my2->name = "test2";
 
 var_dump($my==$my2);//true
+
