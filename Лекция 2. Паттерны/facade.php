@@ -53,3 +53,10 @@ class Facade {
 	}
 
 }
+
+
+
+$facade = new Facade($bios, $os);
+$facade->turnOn();
+$facade->turnOff();
+

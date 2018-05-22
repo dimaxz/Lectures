@@ -72,7 +72,6 @@ else{
 	$comparator = new DateComparator();
 }
 
-
 $contex = new Context($comparator);
 
 $res = $contex->executeStrategy([
