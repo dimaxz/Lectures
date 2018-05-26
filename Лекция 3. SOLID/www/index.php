@@ -1,4 +1,13 @@
 <?php
+require_once '../vendor/autoload.php';
+
+define('BASEPATH', realpath(dirname(__FILE__).'/../'));
+
+$app = new Application\Application;
+
+echo $app->run();
+
+exit;
 //1. Формирование отчета по заказам
 //Пользователь имеет возможность нажать кнопку "Сформировать отчет"
 //

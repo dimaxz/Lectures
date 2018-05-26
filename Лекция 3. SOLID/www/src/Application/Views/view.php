@@ -1,6 +1,5 @@
-
+<h1><?=$test?></h1>
 <form method="POST" name="create-report">
-
     <select name="type" >
         <option>Тип отчета</option>
         <option value="screen">Печать на экран</option>

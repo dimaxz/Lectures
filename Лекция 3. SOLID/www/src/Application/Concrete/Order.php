@@ -1,9 +1,13 @@
-<?php
+<?
+
+namespace Application\Concrete;
 
 /**
- * DTO
+ * Description of Order
+ *
+ * @author Admin
  */
-class Order implements OrderInterface
+class Order implements \Domain\Report\OrderInterface
 {
 
     protected $id;
@@ -20,7 +24,7 @@ class Order implements OrderInterface
                 ->setCurrency($currency)
                 ->setId($id)
                 ->setDate($date)
-                ;
+        ;
     }
 
     function getId()
@@ -79,55 +83,6 @@ class Order implements OrderInterface
     {
         $this->date = $date;
         return $this;
-    }
-
-}
-
-class ReportHtml implements ReportInterface
-{
-
-    public function create(array $orders)
-    {
-
-        $h = "<table>";
-        foreach ($orders as $order) {
-
-            $h .= sprintf(
-                    "<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>", 
-                    $order->getId(), 
-                    $order->getDate(),
-                    $order->getSumm(), $order->getCount(), $order->getCurrency()
-                    )
-            ;
-        }
-        $h .= "<table>";
-        return $h;
-    }
-
-}
-
-
-class ReportCsv implements ReportInterface
-{
-
-    public function create(array $orders)
-    {
-
-     
-        
-        $h = "";
-        foreach ($orders as $order) {
-
-            $h .= sprintf(
-                    "%s;%s;%s;%s<br/>", 
-                    $order->getId(), 
-                    $order->getDate(),
-                    $order->getSumm(), $order->getCount(), $order->getCurrency()
-                    )
-            ;
-        }
-        
-        return $h;
     }
 
 }
